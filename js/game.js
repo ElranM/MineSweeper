@@ -29,7 +29,7 @@ var gGame = {
 function initGame() {
 
     gBoard = buildBoard()
-    createMines(gBoard)
+    // createMines(gBoard)
     printMat(gBoard, '.board-container')
     gGame.isOn = true
 }
@@ -52,27 +52,27 @@ function buildBoard() {
 
 
 
-function createMine(board) {
-    var mine = {
-        location: {
-            i: 3,
-            j: 3
-        },
-        currCellContent: FOOD
-    }
+// function createMine(board) {
+//     var mine = {
+//         location: {
+//             i: 3,
+//             j: 3
+//         },
+//         currCellContent: FOOD
+//     }
 
-    gGhosts.push(ghost);
-    board[ghost.location.i][ghost.location.j] = GHOST;
-}
+//     gGhosts.push(ghost);
+//     board[ghost.location.i][ghost.location.j] = GHOST;
+// }
 
 
 
-function createMines(board) {
-    gGhosts = []
-    createMine(board);
-    createMine(board);
+// function createMines(board) {
+//     gGhosts = []
+//     createMine(board);
+//     createMine(board);
 
-}
+// }
 
 
 
