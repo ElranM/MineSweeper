@@ -1,6 +1,9 @@
 'use strict'
 
 
+
+
+
 const MINE = '💣'
 const FLOOR = ''
 var gBoard;
@@ -30,10 +33,10 @@ function initGame() {
 
 
 function buildBoard() {
-
+    
     var board = createMat(4, 4);
     //console.log(board);
-
+    
     for (var i = 0; i < board.length; i++) {
         for (var j = 0; j < board[0].length; j++) {
             var cell = {
@@ -46,7 +49,7 @@ function buildBoard() {
             if ((i === 1 && j === 3) || (i === 2 && j === 1)) cell.isMine = true
         }
     }
-
+    
     console.table(board);
     return board;
 }
@@ -61,22 +64,22 @@ function renderBoard(board) {
         strHTML += '<tr>\n';
         for (var j = 0; j < board[0].length; j++) {
             var currCell = board[i][j];
-
+            
             var cellClass = getClassName({ i: i, j: j })
-
+            
             if (currCell.isMine) cellClass += ' mine';
             else cellClass += ' floor';
-
+            
             strHTML += '\t<td class="cell ' + cellClass + '"  onclick="moveTo(' + i + ',' + j + ')" >\n';
 
             if (currCell.isMine === true) strHTML += MINE;
             else strHTML += FLOOR;
-
+            
             strHTML += '\t</td>\n';
         }
         strHTML += '</tr>\n';
     }
-
+    
     var elBoard = document.querySelector('.board');
     elBoard.innerHTML = strHTML;
 }
@@ -93,7 +96,10 @@ function getClassName(location) {
 
 
 function renderCell(location, value) {
-	var cellSelector = '.' + getClassName(location)
+    var cellSelector = '.' + getClassName(location)
 	var elCell = document.querySelector(cellSelector);
 	elCell.innerHTML = value;
+
+
+
 }

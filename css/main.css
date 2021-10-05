@@ -12,3 +12,16 @@ body {
     font-size: 1.2em;
     border:solid black
   }
+
+
+
+  #seconds {
+    font-size: 1.2em;
+  }
+  
+  #minutes { 
+    font-size: 1.2em;
+  }
+  #colon {
+    font-size: 1.2em;
+  }
