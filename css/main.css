@@ -1,7 +1,14 @@
+body {
+  background-color: rgb(217, 242, 250);
+}
+
+
+
 .cell {
+  background-color: rgb(199, 196, 196);
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 1.2em;
-    border:solid gray
+    border:solid black
   }
